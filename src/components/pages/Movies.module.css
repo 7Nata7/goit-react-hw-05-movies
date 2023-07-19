@@ -1,0 +1,20 @@
+.input {
+  padding: 8px;
+  width: 200px;
+  height: 20px;
+  font-size: 18px;
+}
+
+.buttonSearch {
+  padding: 8px;
+  height: 40px;
+  width: 80px;
+  background-color: rgba(224, 33, 33, 0.541);
+  font-size: 18px;
+  margin-left: 10px;
+  align-items: center;
+}
+
+form {
+  padding: 30px 10px;
+}
