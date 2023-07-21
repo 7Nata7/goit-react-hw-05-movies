@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Reviews = ({ reviews }) => {
   return (
@@ -18,4 +19,16 @@ export const Reviews = ({ reviews }) => {
       )}
     </div>
   );
+};
+
+Reviews.propTypes = {
+  reviews: PropTypes.shape({
+    results: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        content: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  }),
 };

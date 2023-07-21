@@ -1,19 +1,5 @@
-// import React from 'react';
-
-// export const Cast = ({ cast }) => {
-//   return (
-//     <div>
-//       <h4>Cast</h4>
-//       <ul>
-//         {cast.slice(0, 5).map(actor => (
-//           <li key={actor.id}>{actor.name}</li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Cast = ({ cast }) => {
   return (
@@ -32,4 +18,14 @@ export const Cast = ({ cast }) => {
       </ul>
     </div>
   );
+};
+
+Cast.propTypes = {
+  cast: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      profile_path: PropTypes.string,
+    })
+  ),
 };
